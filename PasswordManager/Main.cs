@@ -18,7 +18,7 @@ namespace PasswordManager
             dataTable.Columns.Add("Website");
             dataTable.Columns.Add("Username");
             dataTable.Columns.Add("Password");
-            string filePath = "C:\\Users\\avene\\source\\repos\\Hayden-Prewett\\PasswordManager\\PasswordManager\\testDB.csv";
+            string filePath = "testDB.csv"; // may need to add your own path here
 
             // initialise StreamReader file handling
             StreamReader streamReader = new StreamReader(filePath);
