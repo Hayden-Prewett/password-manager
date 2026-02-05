@@ -14,7 +14,6 @@ namespace PasswordManager
         {
             InitializeComponent();
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ID");
             dataTable.Columns.Add("Website");
             dataTable.Columns.Add("Username");
             dataTable.Columns.Add("Password");
@@ -28,9 +27,10 @@ namespace PasswordManager
                 // split at commas
                 database = streamReader.ReadLine().Split(',');
                 // add to datatable
-                dataTable.Rows.Add(database[0],database[1], database[2], database[3]); 
+                dataTable.Rows.Add(database[0],database[1], database[2]); 
             }
             loginsDataGrid.DataSource = dataTable;
+            streamReader.Close();
         }
 
         void btnAddPassword_Click(object sender, EventArgs e)

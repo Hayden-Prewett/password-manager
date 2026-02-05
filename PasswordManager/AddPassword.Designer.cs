@@ -31,7 +31,7 @@
             btnApplyAddPassword = new Button();
             lblWebsiteName = new Label();
             txtWebsite = new TextBox();
-            textBox1 = new TextBox();
+            txtUsernameInput = new TextBox();
             lblUsername = new Label();
             txtPassword = new TextBox();
             lblPassword = new Label();
@@ -62,15 +62,13 @@
             txtWebsite.Name = "txtWebsite";
             txtWebsite.Size = new Size(312, 27);
             txtWebsite.TabIndex = 3;
-            txtWebsite.TextChanged += txtWebsite_TextChanged;
             // 
-            // textBox1
+            // txtUsernameInput
             // 
-            textBox1.Location = new Point(127, 73);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(312, 27);
-            textBox1.TabIndex = 5;
-            textBox1.TextChanged += txtUsername_TextChanged;
+            txtUsernameInput.Location = new Point(127, 73);
+            txtUsernameInput.Name = "txtUsernameInput";
+            txtUsernameInput.Size = new Size(312, 27);
+            txtUsernameInput.TabIndex = 5;
             // 
             // lblUsername
             // 
@@ -87,7 +85,6 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(312, 27);
             txtPassword.TabIndex = 7;
-            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblPassword
             // 
@@ -105,7 +102,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsernameInput);
             Controls.Add(lblUsername);
             Controls.Add(txtWebsite);
             Controls.Add(lblWebsiteName);
@@ -121,7 +118,7 @@
         private Button btnApplyAddPassword;
         private Label lblWebsiteName;
         private TextBox txtWebsite;
-        private TextBox textBox1;
+        private TextBox txtUsernameInput;
         private Label lblUsername;
         private TextBox txtPassword;
         private Label lblPassword;
