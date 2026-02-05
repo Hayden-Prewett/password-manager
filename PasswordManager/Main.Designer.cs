@@ -67,6 +67,8 @@
             // 
             // loginsDataGrid
             // 
+            loginsDataGrid.BackgroundColor = SystemColors.Control;
+            loginsDataGrid.BorderStyle = BorderStyle.None;
             loginsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             loginsDataGrid.Location = new Point(12, 68);
             loginsDataGrid.Name = "loginsDataGrid";
