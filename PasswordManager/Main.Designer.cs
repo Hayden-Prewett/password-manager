@@ -57,9 +57,9 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(319, 402);
+            btnQuit.Location = new Point(365, 402);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(236, 36);
+            btnQuit.Size = new Size(202, 36);
             btnQuit.TabIndex = 7;
             btnQuit.Text = "Quit";
             btnQuit.UseVisualStyleBackColor = true;

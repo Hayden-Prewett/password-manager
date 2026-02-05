@@ -39,7 +39,7 @@
             // 
             // btnApplyAddPassword
             // 
-            btnApplyAddPassword.Location = new Point(657, 405);
+            btnApplyAddPassword.Location = new Point(429, 197);
             btnApplyAddPassword.Name = "btnApplyAddPassword";
             btnApplyAddPassword.Size = new Size(131, 33);
             btnApplyAddPassword.TabIndex = 0;
@@ -83,6 +83,7 @@
             // 
             txtPassword.Location = new Point(127, 121);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(312, 27);
             txtPassword.TabIndex = 7;
             // 
@@ -99,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(572, 242);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
             Controls.Add(txtUsernameInput);
