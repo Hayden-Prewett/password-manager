@@ -13,6 +13,13 @@ namespace PasswordManager
         public Main()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        // Functions //
+        private void LoadData()
+        {
+            // load data into the DataTable
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("Website");
             dataTable.Columns.Add("Username");
@@ -33,6 +40,8 @@ namespace PasswordManager
             streamReader.Close();
         }
 
+
+        // Event handling //
         void btnAddPassword_Click(object sender, EventArgs e)
         {
             // When the Add Password button is clicked, open AddPassword form
@@ -49,6 +58,8 @@ namespace PasswordManager
         private void loginsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // when a cell is clicked
+            var LoginInfo = new LoginInfo();
+            LoginInfo.Show();
         }
     }
 }
