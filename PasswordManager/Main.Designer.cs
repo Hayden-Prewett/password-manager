@@ -31,8 +31,8 @@
             btnAddPassword = new Button();
             lblPasswordManagerTitle = new Label();
             btnQuit = new Button();
-            loginsDataGrid = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)loginsDataGrid).BeginInit();
+            dgvLogins = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvLogins).BeginInit();
             SuspendLayout();
             // 
             // btnAddPassword
@@ -65,30 +65,30 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
-            // loginsDataGrid
+            // dgvLogins
             // 
-            loginsDataGrid.BackgroundColor = SystemColors.Control;
-            loginsDataGrid.BorderStyle = BorderStyle.None;
-            loginsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            loginsDataGrid.Location = new Point(24, 57);
-            loginsDataGrid.Name = "loginsDataGrid";
-            loginsDataGrid.RowHeadersWidth = 51;
-            loginsDataGrid.Size = new Size(484, 303);
-            loginsDataGrid.TabIndex = 8;
-            loginsDataGrid.CellContentClick += loginsDataGrid_CellContentClick;
+            dgvLogins.BackgroundColor = SystemColors.Control;
+            dgvLogins.BorderStyle = BorderStyle.None;
+            dgvLogins.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLogins.Location = new Point(24, 57);
+            dgvLogins.Name = "dgvLogins";
+            dgvLogins.RowHeadersWidth = 51;
+            dgvLogins.Size = new Size(484, 303);
+            dgvLogins.TabIndex = 8;
+            dgvLogins.CellContentClick += loginsDataGrid_CellContentClick;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(533, 450);
-            Controls.Add(loginsDataGrid);
+            Controls.Add(dgvLogins);
             Controls.Add(btnQuit);
             Controls.Add(lblPasswordManagerTitle);
             Controls.Add(btnAddPassword);
             Name = "Main";
             Text = "Password Manager";
-            ((System.ComponentModel.ISupportInitialize)loginsDataGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLogins).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,6 +97,6 @@
         private Button btnAddPassword;
         private Label lblPasswordManagerTitle;
         private Button btnQuit;
-        private DataGridView loginsDataGrid;
+        private DataGridView dgvLogins;
     }
 }
