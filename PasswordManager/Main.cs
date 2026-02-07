@@ -17,7 +17,7 @@ namespace PasswordManager
             dataTable.Columns.Add("Website");
             dataTable.Columns.Add("Username");
             dataTable.Columns.Add("Password");
-            string filePath = "testDB.csv"; // may need to add your own path here
+            string filePath = @"..\..\..\testDB.csv"; // The path for the testDB.csv
 
             // initialise StreamReader file handling
             StreamReader streamReader = new StreamReader(filePath);
@@ -27,7 +27,7 @@ namespace PasswordManager
                 // split at commas
                 database = streamReader.ReadLine().Split(',');
                 // add to datatable
-                dataTable.Rows.Add(database[0],database[1], database[2]); 
+                dataTable.Rows.Add(database[0], database[1], database[2]);
             }
             loginsDataGrid.DataSource = dataTable;
             streamReader.Close();

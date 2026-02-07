@@ -49,7 +49,7 @@
             // 
             lblPasswordManagerTitle.AutoSize = true;
             lblPasswordManagerTitle.Font = new Font("Segoe UI", 15F);
-            lblPasswordManagerTitle.Location = new Point(177, 19);
+            lblPasswordManagerTitle.Location = new Point(145, 9);
             lblPasswordManagerTitle.Name = "lblPasswordManagerTitle";
             lblPasswordManagerTitle.Size = new Size(226, 35);
             lblPasswordManagerTitle.TabIndex = 4;
@@ -57,7 +57,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(365, 402);
+            btnQuit.Location = new Point(316, 402);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(202, 36);
             btnQuit.TabIndex = 7;
@@ -70,10 +70,10 @@
             loginsDataGrid.BackgroundColor = SystemColors.Control;
             loginsDataGrid.BorderStyle = BorderStyle.None;
             loginsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            loginsDataGrid.Location = new Point(12, 68);
+            loginsDataGrid.Location = new Point(24, 57);
             loginsDataGrid.Name = "loginsDataGrid";
             loginsDataGrid.RowHeadersWidth = 51;
-            loginsDataGrid.Size = new Size(555, 303);
+            loginsDataGrid.Size = new Size(484, 303);
             loginsDataGrid.TabIndex = 8;
             loginsDataGrid.CellContentClick += loginsDataGrid_CellContentClick;
             // 
@@ -81,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(608, 450);
+            ClientSize = new Size(533, 450);
             Controls.Add(loginsDataGrid);
             Controls.Add(btnQuit);
             Controls.Add(lblPasswordManagerTitle);

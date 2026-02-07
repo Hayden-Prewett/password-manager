@@ -24,7 +24,7 @@ namespace PasswordManager
 
             // add to the file
             // encryption will be added later
-            string filePath = "testDB.csv";
+            string filePath = @"..\..\..\testDB.csv";
 
             
             StreamWriter streamWriter = new StreamWriter(filePath,true);
