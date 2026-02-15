@@ -31,6 +31,7 @@
             btnRemovePassword = new Button();
             btnChangePassword = new Button();
             btnQuit = new Button();
+            lblTest = new Label();
             SuspendLayout();
             // 
             // btnRemovePassword
@@ -63,17 +64,28 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
+            // lblTest
+            // 
+            lblTest.AutoSize = true;
+            lblTest.Location = new Point(498, 151);
+            lblTest.Name = "lblTest";
+            lblTest.Size = new Size(33, 20);
+            lblTest.TabIndex = 7;
+            lblTest.Text = "test";
+            // 
             // LoginInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblTest);
             Controls.Add(btnQuit);
             Controls.Add(btnRemovePassword);
             Controls.Add(btnChangePassword);
             Name = "LoginInfo";
             Text = "LoginInfo";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -81,5 +93,6 @@
         private Button btnRemovePassword;
         private Button btnChangePassword;
         private Button btnQuit;
+        private Label lblTest;
     }
 }

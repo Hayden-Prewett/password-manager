@@ -15,6 +15,11 @@ namespace PasswordManager
             InitializeComponent();
         }
 
+        public void ShowLoginInfo(string website)
+        {
+            lblTest.Text = website;
+        }
+
         private void btnRemovePassword_Click(object sender, EventArgs e)
         {
             // open 'are you sure' message then remove password

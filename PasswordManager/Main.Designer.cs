@@ -32,6 +32,7 @@
             lblPasswordManagerTitle = new Label();
             btnQuit = new Button();
             dgvLogins = new DataGridView();
+            lblMessage = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvLogins).BeginInit();
             SuspendLayout();
             // 
@@ -67,21 +68,35 @@
             // 
             // dgvLogins
             // 
+            dgvLogins.AllowUserToAddRows = false;
+            dgvLogins.AllowUserToDeleteRows = false;
             dgvLogins.BackgroundColor = SystemColors.Control;
             dgvLogins.BorderStyle = BorderStyle.None;
             dgvLogins.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLogins.Cursor = Cursors.Hand;
             dgvLogins.Location = new Point(24, 57);
             dgvLogins.Name = "dgvLogins";
+            dgvLogins.ReadOnly = true;
             dgvLogins.RowHeadersWidth = 51;
             dgvLogins.Size = new Size(484, 303);
             dgvLogins.TabIndex = 8;
-            dgvLogins.CellContentClick += loginsDataGrid_CellContentClick;
+            dgvLogins.CellClick += dgvLogins_CellClick;
+            // 
+            // lblMessage
+            // 
+            lblMessage.AutoSize = true;
+            lblMessage.Location = new Point(122, 363);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(268, 20);
+            lblMessage.TabIndex = 9;
+            lblMessage.Text = "Click a password to view, delete or edit";
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(533, 450);
+            Controls.Add(lblMessage);
             Controls.Add(dgvLogins);
             Controls.Add(btnQuit);
             Controls.Add(lblPasswordManagerTitle);
@@ -98,5 +113,6 @@
         private Label lblPasswordManagerTitle;
         private Button btnQuit;
         private DataGridView dgvLogins;
+        private Label lblMessage;
     }
 }

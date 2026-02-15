@@ -34,7 +34,7 @@ namespace PasswordManager
                 // split at commas
                 database = streamReader.ReadLine().Split(',');
                 // add to datatable
-                dataTable.Rows.Add(database[0], database[1], database[2]);
+                dataTable.Rows.Add(database[0], database[1], "********");
             }
             dgvLogins.DataSource = dataTable;
             streamReader.Close();
@@ -55,11 +55,15 @@ namespace PasswordManager
             System.Windows.Forms.Application.Exit();
         }
 
-        private void loginsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvLogins_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // when a cell is clicked
+            // get the website from the selected row when the user clicks
+            var selectedRow = dgvLogins.Rows[e.RowIndex];
+            var website = selectedRow.Cells["Website"].Value.ToString();
+
             var LoginInfo = new LoginInfo();
             LoginInfo.Show();
+            LoginInfo.ShowLoginInfo(website);
         }
     }
 }
