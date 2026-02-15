@@ -28,60 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRemovePassword = new Button();
-            btnChangePassword = new Button();
+            btnEditLogin = new Button();
             btnQuit = new Button();
-            lblTest = new Label();
+            lblWebsite = new Label();
+            lblUsername = new Label();
+            lblPassword = new Label();
+            btnDeleteLogin = new Button();
             SuspendLayout();
             // 
-            // btnRemovePassword
+            // btnEditLogin
             // 
-            btnRemovePassword.Location = new Point(272, 388);
-            btnRemovePassword.Name = "btnRemovePassword";
-            btnRemovePassword.Size = new Size(236, 36);
-            btnRemovePassword.TabIndex = 5;
-            btnRemovePassword.Text = "Remove this password";
-            btnRemovePassword.UseVisualStyleBackColor = true;
-            btnRemovePassword.Click += btnRemovePassword_Click;
-            // 
-            // btnChangePassword
-            // 
-            btnChangePassword.Location = new Point(12, 388);
-            btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.Size = new Size(236, 36);
-            btnChangePassword.TabIndex = 4;
-            btnChangePassword.Text = "Change this password";
-            btnChangePassword.UseVisualStyleBackColor = true;
-            btnChangePassword.Click += btnChangePassword_Click;
+            btnEditLogin.Location = new Point(12, 180);
+            btnEditLogin.Name = "btnEditLogin";
+            btnEditLogin.Size = new Size(383, 36);
+            btnEditLogin.TabIndex = 4;
+            btnEditLogin.Text = "Edit this login";
+            btnEditLogin.UseVisualStyleBackColor = true;
+            btnEditLogin.Click += btnEditLogin_Click;
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(537, 388);
+            btnQuit.Location = new Point(224, 326);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(236, 36);
+            btnQuit.Size = new Size(171, 36);
             btnQuit.TabIndex = 6;
             btnQuit.Text = "Quit";
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
-            // lblTest
+            // lblWebsite
             // 
-            lblTest.AutoSize = true;
-            lblTest.Location = new Point(498, 151);
-            lblTest.Name = "lblTest";
-            lblTest.Size = new Size(33, 20);
-            lblTest.TabIndex = 7;
-            lblTest.Text = "test";
+            lblWebsite.AutoSize = true;
+            lblWebsite.Location = new Point(48, 35);
+            lblWebsite.Name = "lblWebsite";
+            lblWebsite.Size = new Size(62, 20);
+            lblWebsite.TabIndex = 7;
+            lblWebsite.Text = "Website";
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(48, 86);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(75, 20);
+            lblUsername.TabIndex = 8;
+            lblUsername.Text = "Username";
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(48, 135);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(70, 20);
+            lblPassword.TabIndex = 9;
+            lblPassword.Text = "Password";
+            // 
+            // btnDeleteLogin
+            // 
+            btnDeleteLogin.Location = new Point(12, 245);
+            btnDeleteLogin.Name = "btnDeleteLogin";
+            btnDeleteLogin.Size = new Size(383, 36);
+            btnDeleteLogin.TabIndex = 10;
+            btnDeleteLogin.Text = "Delete this login";
+            btnDeleteLogin.UseVisualStyleBackColor = true;
+            btnDeleteLogin.Click += btnDeleteLogin_Click;
             // 
             // LoginInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(lblTest);
+            ClientSize = new Size(407, 374);
+            Controls.Add(btnDeleteLogin);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUsername);
+            Controls.Add(lblWebsite);
             Controls.Add(btnQuit);
-            Controls.Add(btnRemovePassword);
-            Controls.Add(btnChangePassword);
+            Controls.Add(btnEditLogin);
             Name = "LoginInfo";
             Text = "LoginInfo";
             ResumeLayout(false);
@@ -91,8 +113,11 @@
         #endregion
 
         private Button btnRemovePassword;
-        private Button btnChangePassword;
+        private Button btnEditLogin;
         private Button btnQuit;
-        private Label lblTest;
+        private Label lblWebsite;
+        private Label lblUsername;
+        private Label lblPassword;
+        private Button btnDeleteLogin;
     }
 }
