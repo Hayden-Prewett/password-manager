@@ -32,6 +32,7 @@ namespace PasswordManager
             streamWriter.Close();
 
             // close the AddPassword form (window)
+            MessageBox.Show("Password successfully added!", "Success");
             Close();
         }
     }
