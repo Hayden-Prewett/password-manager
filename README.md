@@ -18,3 +18,6 @@ This will be fixed in the future.
 The solution structure will also be reorganised at some point to give more centralised functions & constants that 
 can be used accross the different forms (e.g. having a seperate database management class which is referred to,
 instead of having all the functionality in the events methods)
+
+Another feature to add is password encryption, whilst not guaranteed to be secure, it is a good skill for
+me to practice and better than storing in a plaintext csv file.
