@@ -60,10 +60,12 @@ namespace PasswordManager
             // get the website from the selected row when the user clicks
             var selectedRow = dgvLogins.Rows[e.RowIndex];
             var website = selectedRow.Cells["Website"].Value.ToString();
+            var username = selectedRow.Cells["Username"].Value.ToString();
+            var password = selectedRow.Cells["Password"].Value.ToString();
 
             var LoginInfo = new LoginInfo();
             LoginInfo.Show();
-            LoginInfo.ShowLoginInfo(website);
+            LoginInfo.ShowLoginInfo(website, username, password);
         }
     }
 }

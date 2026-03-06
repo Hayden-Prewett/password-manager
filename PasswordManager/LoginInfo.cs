@@ -15,8 +15,9 @@ namespace PasswordManager
             InitializeComponent();
         }
 
-        public void ShowLoginInfo(string website)
+        public void ShowLoginInfo(string website, string username, string password)
         {
+            // display the login information for a given website
             lblWebsite.Text = $"Website: {website}";
             lblUsername.Text = $"Username: {username}";
             lblPassword.Text = $"Password: {password}";
