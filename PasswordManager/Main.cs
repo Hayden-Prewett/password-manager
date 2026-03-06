@@ -34,7 +34,7 @@ namespace PasswordManager
                 // split at commas
                 database = streamReader.ReadLine().Split(',');
                 // add to datatable
-                dataTable.Rows.Add(database[0], database[1], "********");
+                dataTable.Rows.Add(database[0], database[1], database[2]);
             }
             dgvLogins.DataSource = dataTable;
             streamReader.Close();
@@ -49,11 +49,13 @@ namespace PasswordManager
             AddPassword.Show();
         }
 
+
         private void btnQuit_Click(object sender, EventArgs e)
         {
             // end execution
             System.Windows.Forms.Application.Exit();
         }
+
 
         private void dgvLogins_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -66,6 +68,21 @@ namespace PasswordManager
             var LoginInfo = new LoginInfo();
             LoginInfo.Show();
             LoginInfo.ShowLoginInfo(website, username, password);
+        }
+
+        
+        private void dgvLogins_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // format the data grid to hide passwords
+
+            // Check if we are in the correct column (e.g., column index 2 is "Password" or "SSN")
+            if (e.ColumnIndex == 2 && e.Value != null)
+            {
+                // Mask the data
+                e.Value = "********";
+                // Tell the grid not to apply any further formatting
+                e.FormattingApplied = true;
+            }
         }
     }
 }

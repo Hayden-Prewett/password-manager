@@ -21,7 +21,6 @@ namespace PasswordManager
             lblWebsite.Text = $"Website: {website}";
             lblUsername.Text = $"Username: {username}";
             lblPassword.Text = $"Password: {password}";
-
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

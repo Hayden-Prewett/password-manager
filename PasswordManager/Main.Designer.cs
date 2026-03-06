@@ -81,6 +81,7 @@
             dgvLogins.Size = new Size(484, 303);
             dgvLogins.TabIndex = 8;
             dgvLogins.CellClick += dgvLogins_CellClick;
+            dgvLogins.CellFormatting += dgvLogins_CellFormatting;
             // 
             // lblMessage
             // 
