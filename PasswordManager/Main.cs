@@ -65,9 +65,8 @@ namespace PasswordManager
             var username = selectedRow.Cells["Username"].Value.ToString();
             var password = selectedRow.Cells["Password"].Value.ToString();
 
-            var LoginInfo = new LoginInfo();
+            var LoginInfo = new LoginInfo(website, username, password);
             LoginInfo.Show();
-            LoginInfo.ShowLoginInfo(website, username, password);
         }
 
         

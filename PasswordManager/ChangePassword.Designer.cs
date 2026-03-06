@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNewPassword = new TextBox();
+            txtNewPassword = new TextBox();
             txtConfirmNewPassword = new TextBox();
             lblCurrentPassword = new Label();
             lblNewPassword = new Label();
@@ -38,10 +38,10 @@
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new Point(181, 73);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new Size(199, 27);
-            this.txtNewPassword.TabIndex = 0;
+            txtNewPassword.Location = new Point(181, 73);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.Size = new Size(199, 27);
+            txtNewPassword.TabIndex = 0;
             // 
             // txtConfirmNewPassword
             // 
@@ -85,6 +85,7 @@
             btnApply.TabIndex = 5;
             btnApply.Text = "Apply changes";
             btnApply.UseVisualStyleBackColor = true;
+            btnApply.Click += btnApply_Click;
             // 
             // ChangePassword
             // 
@@ -96,7 +97,7 @@
             Controls.Add(lblNewPassword);
             Controls.Add(lblCurrentPassword);
             Controls.Add(txtConfirmNewPassword);
-            Controls.Add(this.txtNewPassword);
+            Controls.Add(txtNewPassword);
             Name = "ChangePassword";
             Text = "ChangePassword";
             ResumeLayout(false);

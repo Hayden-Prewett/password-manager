@@ -1,18 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PasswordManager
 {
     public partial class LoginInfo : Form
     {
-        public LoginInfo() // the login information and options for one specific login when selected
+        // class variables to store website, username and password
+        private readonly string _website;
+        private readonly string _username;
+        private readonly string _password;
+
+        public LoginInfo(string website, string username, string password)
         {
             InitializeComponent();
+            // assign website, username and password class variables
+            _website = website;
+            _username = username;
+            _password = password;
+
+            // display the login info to the user
+            ShowLoginInfo(_website, _username, _password);
         }
 
         public void ShowLoginInfo(string website, string username, string password)
@@ -25,13 +32,16 @@ namespace PasswordManager
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            // close application
-            System.Windows.Forms.Application.Exit();
+            // close form
+            this.Close();
         }
 
         private void btnEditLogin_Click(object sender, EventArgs e)
         {
-            // Allow the user to edit the login
+            // Show the ChangePassword form and
+            // pass the stored website/username/password
+            var changePassword = new ChangePassword(_website, _username, _password);
+            changePassword.Show();
         }
 
         private void btnDeleteLogin_Click(object sender, EventArgs e)
