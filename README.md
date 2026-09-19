@@ -6,7 +6,7 @@ plaintext (.csv) file. They will soon be hashed once I add all basic functionali
 
 Please also note that if you are runnning the code, you may have to change the filePath variable for the 
 correct path for test.csv, but it should work. Currently, there are multiple instances where I use the filepath,
-and I'm yet to create a centralised file path variable somewhere...
+and I'm yet to create a workaround for this...
 
 ## Future plans
 Currently, there is very little validation in the code. This is because **I am getting the main functionality
